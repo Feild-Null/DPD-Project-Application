@@ -340,8 +340,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 158460050}
-        m_TargetAssemblyTypeName: ButtonScript, Assembly-CSharp
+      - m_Target: {fileID: 158460052}
+        m_TargetAssemblyTypeName: ButtonScriptDriver, Assembly-CSharp
         m_MethodName: ButtonPressed
         m_Mode: 2
         m_Arguments:
@@ -399,7 +399,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 158460051}
-  - component: {fileID: 158460050}
+  - component: {fileID: 158460052}
   m_Layer: 0
   m_Name: ButtonEventHandler
   m_TagString: Untagged
@@ -407,23 +407,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &158460050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 158460049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 049f00994f65a4449869f064c6720e05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainText: {fileID: 125149622}
-  YesButton: {fileID: 126389419}
-  NoButton: {fileID: 419456937}
-  index1: 0
-  index2: 0
 --- !u!4 &158460051
 Transform:
   m_ObjectHideFlags: 0
@@ -439,6 +422,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &158460052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158460049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e44a51082aadc44ba03d46b9d909f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainText: {fileID: 125149622}
+  YesButton: {fileID: 126389419}
+  NoButton: {fileID: 419456937}
+  index1: 0
+  index2: 0
 --- !u!1 &297489385
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,8 +601,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 158460050}
-        m_TargetAssemblyTypeName: ButtonScript, Assembly-CSharp
+      - m_Target: {fileID: 158460052}
+        m_TargetAssemblyTypeName: ButtonScriptDriver, Assembly-CSharp
         m_MethodName: ButtonPressed
         m_Mode: 2
         m_Arguments:
@@ -626,7 +626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.31910086, g: 0.23300104, b: 0.6415094, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -973,8 +973,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 158460050}
-        m_TargetAssemblyTypeName: ButtonScript, Assembly-CSharp
+      - m_Target: {fileID: 158460052}
+        m_TargetAssemblyTypeName: ButtonScriptDriver, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
