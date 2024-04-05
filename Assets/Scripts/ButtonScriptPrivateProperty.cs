@@ -88,6 +88,6 @@ public class ButtonScriptPrivateProperty : MonoBehaviour
     //resets this flowchart
     public void Restart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(3);
     }
 }
