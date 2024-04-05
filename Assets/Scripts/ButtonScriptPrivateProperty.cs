@@ -50,38 +50,42 @@ public class ButtonScriptPrivateProperty : MonoBehaviour
     }
     public void ButtonPressed(GameObject button)
     {
-    
+        //If yes is pressed at indicies 3 and 1, go to indicies 5 and 0.
         if(button.name == "YesButton" && (index1 == 3 && index2 == 1))
         {
             index1 = 5;
             index2 = 0;
             MainText.text = Options[index1,index2];
         }
+        //If yes is pressed add 1 to the first index and set the second index to 0.
         else if(button.name == "YesButton")
         {
             index1 += 1;
             index2 = 0;
             MainText.text = Options[index1,index2];
         }
+        //If no is pressed at indicies 3 and 1, go to indicies 5 and 1.
         if(button.name == "NoButton" && (index1 == 3 && index2 == 1))
         {
             index1 = 5;
             index2 = 1;
             MainText.text = Options[index1,index2];
         }
+        //If no is pressed add 1 to the first index and set the second index to 1.
         else if(button.name == "NoButton")
         {
             index1 += 1;
             index2 = 1;
             MainText.text = Options[index1,index2];
         }
+        //determines end locations, currently (1,0), (2,1)(links to passenger), (1,0)(2,1)(4,1)(4,0)(5,1)(6)
         if((index1 == 1 && index2 == 0)||(index1 == 2 && index2 == 1)||(index1 == 4 && index2 == 1)||(index1==4&&index2==0)||(index1==6)||(index1==5&&index2==1))
         {
             YesButton.SetActive(false);
             NoButton.SetActive(false);
         }
     }
-
+    //resets this flowchart
     public void Restart()
     {
         SceneManager.LoadScene(0);
