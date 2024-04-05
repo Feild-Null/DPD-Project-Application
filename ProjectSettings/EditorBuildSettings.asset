@@ -11,7 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Traffic Stop Driver Chart.unity
     guid: 7fa7454639d1d7f4e94b902c3f67b40f
-  - enabled: 1
-    path: Assets/Scenes/ColorUiTestScene.unity
-    guid: 8ebfc8e8d0df6f7429b87a08241fd370
   m_configObjects: {}
