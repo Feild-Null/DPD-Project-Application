@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class ButtonScriptPassenger : MonoBehaviour
+public class ButtonScript : MonoBehaviour
 {
     public TMP_Text MainText;
     public GameObject YesButton;

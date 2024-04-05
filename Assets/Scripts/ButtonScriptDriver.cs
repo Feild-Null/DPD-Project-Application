@@ -12,8 +12,6 @@ public class ButtonScriptDriver : MonoBehaviour
 
     [SerializeField] int index1 = 0;
     [SerializeField] int index2 = 0;
-
-    //all the possible text scenarios. sections labeled by index, and referenced by [index1, index2]
     public string[,] Options = {
     
         {//0
@@ -74,70 +72,56 @@ public class ButtonScriptDriver : MonoBehaviour
         },
 
     };
-
-    //sets up the text
     void Start()
     {
         MainText.text = Options[index1,index2];
     }
     public void ButtonPressed(GameObject button)
     {
-        //If yes is pressed at indicies 9 and 1, go to indicies 7 and 1.
+    
         if(button.name == "YesButton" && (index1 == 9 && index2 == 1))
         {
             index1 = 7;
             index2 = 1;
             MainText.text = Options[index1,index2];
         }
-        //If yes is pressed at indicies 7 and 1, go to indicies 11 and 0.
         else if(button.name == "YesButton" && (index1 == 7 && index2 == 1))
         {
             index1 = 11;
             index2 = 0;
             MainText.text = Options[index1,index2];
         }
-        //If yes is pressed add 1 to the first index and set the second index to 0.
         else if(button.name == "YesButton")
         {
             index1 += 1;
             index2 = 0;
             MainText.text = Options[index1,index2];
         }
-        //If no is pressed at indicies 2 and 0, go to indicies 9 and 1.
         if(button.name == "NoButton" && (index1 == 2 && index2 == 0))
         {
             index1 = 9;
             index2 = 1;
             MainText.text = Options[index1,index2];
         }
-        //If no is pressed at indicies 7 and 1, go to indicies 11 and 1.
         else if(button.name == "NoButton" && (index1 == 7 && index2 == 1))
         {
             index1 = 11;
             index2 = 1;
             MainText.text = Options[index1,index2];
         }
-        //If no is pressed add 1 to the first index and set the second index to 1.
         else if(button.name == "NoButton")
         {
             index1 += 1;
             index2 = 1;
             MainText.text = Options[index1,index2];
         }
-        //determines end locations, currently (1,0), (2,1)(links to passenger), (4,0), (5,0), (6,0), (8,0), (8,1), (10,1), (11,0), (12,1), (13,0), (13, 1)
-        if((index1 == 1 && index2 == 0)||(index1 == 4 && index2 == 0)||(index1==5&&index2==0)||(index1==6&&index2==0)||(index1==8&&index2==0)||(index1==10&&index2==1)||(index1==11&&index2==0)||(index1==12&&index2==1)||(index1==13))
+        if((index1 == 1 && index2 == 0)||(index1 == 2 && index2 == 1)||(index1 == 4 && index2 == 0)||(index1==5&&index2==0)||(index1==6&&index2==0)||(index1==8&&index2==0)||(index1==10&&index2==1)||(index1==11&&index2==0)||(index1==12&&index2==1)||(index1==13))
         {
             YesButton.SetActive(false);
             NoButton.SetActive(false);
         }
-        //links the flowchart endpoint (2,1) to the passenger chart
-        else if((index1 == 2 && index2 == 1))
-        {
-            SceneManager.LoadScene(0);
-        }
     }
 
-    //resets this flowchart
     public void Restart()
     {
         SceneManager.LoadScene(1);
