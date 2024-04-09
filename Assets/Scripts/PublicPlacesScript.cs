@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
 public class PublicPlaceScript : MonoBehaviour
 {
-    public TMP_Text MainText;
+    public Text MainText;
     public GameObject YesButton;
     public GameObject NoButton;
 
