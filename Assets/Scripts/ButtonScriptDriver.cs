@@ -10,8 +10,8 @@ public class ButtonScriptDriver : MonoBehaviour
     public GameObject YesButton;
     public GameObject NoButton;
 
-    [SerializeField] int index1 = 0;
-    [SerializeField] int index2 = 0;
+    public static int DriverIndex1=StoringValues.valueToKeep;
+    public static int DriverIndex2=StoringValues.valueToKeep2;
     public string[,] Options = {
     
         {//0
@@ -47,8 +47,8 @@ public class ButtonScriptDriver : MonoBehaviour
             "Prior Felony Conviction?"
         },
         {//8
-            "46.02 (a-1)(1) \n Misdemeanor A",
-            "No Offense"
+            "No Offense",
+            "46.02 (a-1)(1) \n Misdemeanor A"
         },
         {//9
             "In Possession of a Firearm?",
@@ -74,48 +74,56 @@ public class ButtonScriptDriver : MonoBehaviour
     };
     void Start()
     {
-        MainText.text = Options[index1,index2];
+        MainText.text = Options[DriverIndex1,DriverIndex2];
     }
     public void ButtonPressed(GameObject button)
     {
     
-        if(button.name == "YesButton" && (index1 == 9 && index2 == 1))
+        if(button.name == "YesButton" && (DriverIndex1 == 9 && DriverIndex2 == 1))
         {
-            index1 = 7;
-            index2 = 1;
-            MainText.text = Options[index1,index2];
+            DriverIndex1 = 7;
+            DriverIndex2 = 1;
+            MainText.text = Options[DriverIndex1,DriverIndex2];
         }
-        else if(button.name == "YesButton" && (index1 == 7 && index2 == 1))
+        else if(button.name == "YesButton" && (DriverIndex1 == 7 && DriverIndex2 == 1))
         {
-            index1 = 11;
-            index2 = 0;
-            MainText.text = Options[index1,index2];
+            DriverIndex1 = 11;
+            DriverIndex2 = 0;
+            MainText.text = Options[DriverIndex1,DriverIndex2];
         }
         else if(button.name == "YesButton")
         {
-            index1 += 1;
-            index2 = 0;
-            MainText.text = Options[index1,index2];
+            DriverIndex1 += 1;
+            DriverIndex2 = 0;
+            MainText.text = Options[DriverIndex1,DriverIndex2];
         }
-        if(button.name == "NoButton" && (index1 == 2 && index2 == 0))
+        if(button.name == "NoButton" && (DriverIndex1 == 2 && DriverIndex2 == 0))
         {
-            index1 = 9;
-            index2 = 1;
-            MainText.text = Options[index1,index2];
+            DriverIndex1 = 9;
+            DriverIndex2 = 1;
+            MainText.text = Options[DriverIndex1,DriverIndex2];
         }
-        else if(button.name == "NoButton" && (index1 == 7 && index2 == 1))
+        else if(button.name == "NoButton" && (DriverIndex1 == 7 && DriverIndex2 == 1))
         {
-            index1 = 11;
-            index2 = 1;
-            MainText.text = Options[index1,index2];
+            DriverIndex1 = 11;
+            DriverIndex2 = 1;
+            MainText.text = Options[DriverIndex1,DriverIndex2];
+        }
+        //Jumps to the Passenger scene at inicies 1 and 1
+        else if(button.name == "NoButton" && (DriverIndex1 == 1 && DriverIndex2 == 1))
+        {
+            StoringValues.valueToKeep3=1;
+            StoringValues.valueToKeep4=1;
+            SceneManager.LoadScene(0);
+            
         }
         else if(button.name == "NoButton")
         {
-            index1 += 1;
-            index2 = 1;
-            MainText.text = Options[index1,index2];
+            DriverIndex1 += 1;
+            DriverIndex2 = 1;
+            MainText.text = Options[DriverIndex1,DriverIndex2];
         }
-        if((index1 == 1 && index2 == 0)||(index1 == 2 && index2 == 1)||(index1 == 4 && index2 == 0)||(index1==5&&index2==0)||(index1==6&&index2==0)||(index1==8&&index2==0)||(index1==10&&index2==1)||(index1==11&&index2==0)||(index1==12&&index2==1)||(index1==13))
+        if((DriverIndex1 == 1 && DriverIndex2 == 0)||(DriverIndex1 == 2 && DriverIndex2 == 1)||(DriverIndex1 == 4 && DriverIndex2 == 0)||(DriverIndex1==5&&DriverIndex2==0)||(DriverIndex1==6&&DriverIndex2==0)||(DriverIndex1==8&&DriverIndex2==0)||(DriverIndex1==10&&DriverIndex2==1)||(DriverIndex1==11&&DriverIndex2==0)||(DriverIndex1==12&&DriverIndex2==1)||(DriverIndex1==13)||(DriverIndex1==8))
         {
             YesButton.SetActive(false);
             NoButton.SetActive(false);

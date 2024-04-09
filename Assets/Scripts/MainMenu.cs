@@ -21,11 +21,11 @@ public class MainMenu : MonoBehaviour
     
         if(button.name == "TrafficButton")
         {
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(0);
         }
         else if(button.name == "ProhibitedButton")
         {
-            SceneManager.LoadScene(6);
+            SceneManager.LoadScene(5);
         }
         else if(button.name == "PublicButton")
         {

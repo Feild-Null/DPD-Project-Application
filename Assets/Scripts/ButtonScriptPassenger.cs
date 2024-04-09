@@ -10,8 +10,8 @@ public class ButtonScriptPassenger : MonoBehaviour
     public GameObject YesButton;
     public GameObject NoButton;
 
-    [SerializeField] int index1 = 0;
-    [SerializeField] int index2 = 0;
+    public static int PassengerIndex1=StoringValues.valueToKeep3;
+    public static int PassengerIndex2=StoringValues.valueToKeep4;
     public string[,] Options = {
     
         {
@@ -66,36 +66,43 @@ public class ButtonScriptPassenger : MonoBehaviour
     };
     void Start()
     {
-        MainText.text = Options[index1,index2];
+        MainText.text = Options[PassengerIndex1,PassengerIndex2];
     }
     public void ButtonPressed(GameObject button)
     {
-    
-        if(button.name == "YesButton" && (index1 == 3 && index2 == 0))
+        if(button.name == "YesButton" && (PassengerIndex1 == 3 && PassengerIndex2 == 0))
         {
-            index1 = 7;
-            index2 = 0;
-            MainText.text = Options[index1,index2];
+            PassengerIndex1 = 7;
+            PassengerIndex2 = 0;
+            MainText.text = Options[PassengerIndex1,PassengerIndex2];
         }
         else if(button.name == "YesButton")
         {
-            index1 += 1;
-            index2 = 0;
-            MainText.text = Options[index1,index2];
+            PassengerIndex1 += 1;
+            PassengerIndex2 = 0;
+            MainText.text = Options[PassengerIndex1,PassengerIndex2];
         }
-        if(button.name == "NoButton" && (index1 == 3 && index2 == 0))
+        if(button.name == "NoButton" && (PassengerIndex1 == 3 && PassengerIndex2 == 0))
         {
-            index1 = 7;
-            index2 = 1;
-            MainText.text = Options[index1,index2];
+            PassengerIndex1 = 7;
+            PassengerIndex2 = 1;
+            MainText.text = Options[PassengerIndex1,PassengerIndex2];
+        }
+        //Jumps to the Driver scene at inicies 1 and 1
+        else if(button.name == "NoButton" && (PassengerIndex1 == 1 && PassengerIndex2 == 1))
+        {
+            StoringValues.valueToKeep=1;
+            StoringValues.valueToKeep2=1;
+            SceneManager.LoadScene(1);
+            
         }
         else if(button.name == "NoButton")
         {
-            index1 += 1;
-            index2 = 1;
-            MainText.text = Options[index1,index2];
+            PassengerIndex1 += 1;
+            PassengerIndex2 = 1;
+            MainText.text = Options[PassengerIndex1,PassengerIndex2];
         }
-        if((index1 == 1 && index2 == 0)||(index1 == 2 && index2 == 1)||(index1 == 4 && index2 == 1)||(index1==5&&index2==0)||(index1==6)||(index1==7&&index2==0)||(index1==8&&index2==0)||(index1==9&&index2==0)||(index1==10&&index2==0)||(index1==11))
+        if((PassengerIndex1 == 1 && PassengerIndex2 == 0)||(PassengerIndex1 == 2 && PassengerIndex2 == 1)||(PassengerIndex1 == 4 && PassengerIndex2 == 1)||(PassengerIndex1==5&&PassengerIndex2==0)||(PassengerIndex1==6)||(PassengerIndex1==7&&PassengerIndex2==0)||(PassengerIndex1==8&&PassengerIndex2==0)||(PassengerIndex1==9&&PassengerIndex2==0)||(PassengerIndex1==10&&PassengerIndex2==0)||(PassengerIndex1==11))
         {
             YesButton.SetActive(false);
             NoButton.SetActive(false);
