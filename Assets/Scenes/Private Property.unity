@@ -203,7 +203,7 @@ MonoBehaviour:
   gameObject: {fileID: 924707120}
   TextSize: 30
   HighContrastMode: 0
-  TextSizes: 
+  TextSizes: []
 --- !u!1 &278539501
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,7 +654,7 @@ GameObject:
   - component: {fileID: 547708074}
   m_Layer: 5
   m_Name: YesButtonText
-  m_TagString: Untagged
+  m_TagString: Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -866,7 +866,7 @@ GameObject:
   - component: {fileID: 715113741}
   m_Layer: 5
   m_Name: MenuButtonText
-  m_TagString: Untagged
+  m_TagString: Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1669,7 +1669,7 @@ GameObject:
   - component: {fileID: 1346625328}
   m_Layer: 5
   m_Name: BranchName
-  m_TagString: Untagged
+  m_TagString: Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1932,7 +1932,7 @@ GameObject:
   - component: {fileID: 1527701023}
   m_Layer: 5
   m_Name: NoButtonText
-  m_TagString: Untagged
+  m_TagString: Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2011,7 +2011,7 @@ GameObject:
   - component: {fileID: 1553097274}
   m_Layer: 5
   m_Name: TextSizeText
-  m_TagString: Untagged
+  m_TagString: Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2220,7 +2220,7 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Previous
@@ -2245,7 +2245,7 @@ GameObject:
   - component: {fileID: 1657963920}
   m_Layer: 5
   m_Name: Text (Legacy)
-  m_TagString: Untagged
+  m_TagString: Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2542,7 +2542,7 @@ GameObject:
   - component: {fileID: 1758488192}
   m_Layer: 5
   m_Name: HighContrastModeText
-  m_TagString: Untagged
+  m_TagString: Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2693,7 +2693,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1711719149}
   m_Direction: 0
   m_MinValue: 30
-  m_MaxValue: 40
+  m_MaxValue: 50
   m_WholeNumbers: 1
   m_Value: 30
   m_OnValueChanged:
@@ -2724,7 +2724,7 @@ GameObject:
   - component: {fileID: 1904800197}
   m_Layer: 5
   m_Name: MainText
-  m_TagString: Untagged
+  m_TagString: Text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
