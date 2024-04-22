@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SettingsScript : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class SettingsScript : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        TextSizes = GameObject.FindGameObjectsWithTag("Text");
         scaleMinimum = new Vector3(0f,0f,0f);
         scaleMaximum = new Vector3(1f,1f,1f);
         if (gameObject != null)
@@ -54,11 +56,11 @@ public class SettingsScript : MonoBehaviour
     }
     public void OnSliderChanged(float value) 
     {
-        // TextSize = value.ToInt();
-        // for (int i = 0; i < TextSizes.len; i++)
-        // {
-        //     TextSizes[i].Font.fontSize = TextSize;
-        // }
+        TextSize = (int) value;
+        for (int i = 0; i < TextSizes.Length; i++)
+        {
+            TextSizes[i].GetComponent<Text>().fontSize = TextSize;
+        }
     }
 
 }
