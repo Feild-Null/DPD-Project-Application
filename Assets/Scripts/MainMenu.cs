@@ -6,7 +6,6 @@ using TMPro;
 
 public class MainMenu : MonoBehaviour
 {
-    public TMP_Text MainText;
     public GameObject TrafficButton;
     public GameObject ProhibitedButton;
     public GameObject PublicButton;
