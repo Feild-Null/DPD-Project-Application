@@ -23,12 +23,18 @@ public class SettingsScript : MonoBehaviour
             gameObject.transform.localScale = scaleMinimum;
             gameObject.SetActive(false);
         }
+        OnSliderChanged(PlayerPrefs.GetInt("TextSize", 0));
+        // if (this.VisualElement.Hierarchy.parent.name == "MainMenu" && TextSize > 39)
+        // {
+        //     TextSize = 39;
+        // }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        PlayerPrefs.SetInt("TextSize", TextSize);
+        PlayerPrefs.Save();
     }
 
 
