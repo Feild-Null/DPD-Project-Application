@@ -423,6 +423,8 @@ MonoBehaviour:
   scaleMaximum: {x: 0, y: 0, z: 0}
   gameObject: {fileID: 1003464231}
   TextSize: 30
+  scene:
+    m_Handle: 0
   HighContrastMode: 0
   TextSizes: []
 --- !u!114 &263913740
@@ -626,8 +628,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 1409313626}
   m_HandleRect: {fileID: 71678321}
   m_Direction: 0
-  m_MinValue: 30
-  m_MaxValue: 50
+  m_MinValue: 29
+  m_MaxValue: 39
   m_WholeNumbers: 1
   m_Value: 30
   m_OnValueChanged:
