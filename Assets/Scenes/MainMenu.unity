@@ -424,7 +424,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Prohibited Weapons
 --- !u!222 &81031813
@@ -500,6 +500,8 @@ MonoBehaviour:
   scaleMaximum: {x: 0, y: 0, z: 0}
   gameObject: {fileID: 720615629}
   TextSize: 30
+  scene:
+    m_Handle: 0
   HighContrastMode: 0
   TextSizes: []
 --- !u!1 &180028769
