@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class PublicPlaceScript : MonoBehaviour
+public class ButtonScriptPublicPlaces : MonoBehaviour
 {
     public Text MainText;
     public GameObject YesButton;
