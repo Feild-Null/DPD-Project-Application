@@ -65,12 +65,17 @@ public class ButtonScriptPassenger : MonoBehaviour
         },
 
     };
-    void Start()
+    public void Awake()
     {
+        PassengerIndex1=StoringValues.valueToKeep3;
+        PassengerIndex2=StoringValues.valueToKeep4;
         MainText.text = Options[PassengerIndex1,PassengerIndex2];
     }
     public void ButtonPressed(GameObject button)
     {
+        StoringValues.previousSceneIndex.Add(SceneManager.GetActiveScene().buildIndex); 
+        StoringValues.previousIndex1.Add(PassengerIndex1);
+        StoringValues.previousIndex2.Add(PassengerIndex2);
         if(button.name == "YesButton" && (PassengerIndex1 == 3 && PassengerIndex2 == 0))
         {
             PassengerIndex1 = 7;

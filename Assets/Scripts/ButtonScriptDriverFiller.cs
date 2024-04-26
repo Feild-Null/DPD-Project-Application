@@ -73,12 +73,17 @@ public class ButtonScriptDriver : MonoBehaviour
         },
 
     };
-    void Start()
+    public void Awake()
     {
+        DriverIndex1=StoringValues.valueToKeep;
+        DriverIndex2=StoringValues.valueToKeep2;
         MainText.text = Options[DriverIndex1,DriverIndex2];
     }
     public void ButtonPressed(GameObject button)
     {
+        StoringValues.previousSceneIndex.Add(SceneManager.GetActiveScene().buildIndex); 
+        StoringValues.previousIndex1.Add(DriverIndex1);
+        StoringValues.previousIndex2.Add(DriverIndex2);
     
         if(button.name == "YesButton" && (DriverIndex1 == 9 && DriverIndex2 == 1))
         {
