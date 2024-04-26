@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -62,15 +63,20 @@ public class ButtonScriptPassenger : MonoBehaviour
         {
             "No Offense",
             "46.02 (a)(2)(A) Misdemeanor A"
-        },
+        }
 
     };
-    void Start()
+    public void Start()
     {
+        PassengerIndex1=StoringValues.valueToKeep3;
+        PassengerIndex2=StoringValues.valueToKeep4;
         MainText.text = Options[PassengerIndex1,PassengerIndex2];
     }
     public void ButtonPressed(GameObject button)
     {
+        StoringValues.previousSceneIndex.Add(SceneManager.GetActiveScene().buildIndex); 
+        StoringValues.previousIndex1.Add(PassengerIndex1);
+        StoringValues.previousIndex2.Add(PassengerIndex2);
         if(button.name == "YesButton" && (PassengerIndex1 == 3 && PassengerIndex2 == 0))
         {
             PassengerIndex1 = 7;

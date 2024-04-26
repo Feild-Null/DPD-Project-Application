@@ -574,6 +574,7 @@ GameObject:
   - component: {fileID: 158460051}
   - component: {fileID: 158460050}
   - component: {fileID: 158460052}
+  - component: {fileID: 158460053}
   m_Layer: 0
   m_Name: ButtonEventHandler
   m_TagString: Untagged
@@ -621,6 +622,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be18931c7c61a0f46bbb63993fbe3d8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &158460053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158460049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc8e288a18cfc6e4595571c0f4a86c0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &309827599
@@ -1381,7 +1394,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1327171170}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 158460053}
+        m_TargetAssemblyTypeName: PreviousButton, Assembly-CSharp
+        m_MethodName: Previous
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 158460050}
+        m_TargetAssemblyTypeName: ButtonScriptPassenger, Assembly-CSharp
+        m_MethodName: Start
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1327171170
 MonoBehaviour:
   m_ObjectHideFlags: 0
