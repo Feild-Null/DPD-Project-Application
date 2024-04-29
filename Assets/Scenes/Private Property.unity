@@ -534,6 +534,7 @@ GameObject:
   - component: {fileID: 191827405}
   - component: {fileID: 191827407}
   - component: {fileID: 191827406}
+  - component: {fileID: 191827409}
   m_Layer: 0
   m_Name: ButtonEventHandler
   m_TagString: Untagged
@@ -576,8 +577,6 @@ MonoBehaviour:
   MainText: {fileID: 1904800197}
   YesButton: {fileID: 370520384}
   NoButton: {fileID: 633539733}
-  index1: 0
-  index2: 0
 --- !u!114 &191827407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,6 +604,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &191827409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191827404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc8e288a18cfc6e4595571c0f4a86c0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  YesButton: {fileID: 370520384}
+  NoButton: {fileID: 633539733}
 --- !u!1 &370520384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,7 +1404,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 893437092}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 191827409}
+        m_TargetAssemblyTypeName: PreviousButton, Assembly-CSharp
+        m_MethodName: Previous
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 191827406}
+        m_TargetAssemblyTypeName: ButtonScriptPrivateProperty, Assembly-CSharp
+        m_MethodName: Awake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &893437092
 MonoBehaviour:
   m_ObjectHideFlags: 0

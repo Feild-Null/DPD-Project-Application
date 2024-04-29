@@ -441,9 +441,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 158460051}
-  - component: {fileID: 158460050}
   - component: {fileID: 158460052}
   - component: {fileID: 158460053}
+  - component: {fileID: 158460055}
+  - component: {fileID: 158460054}
   m_Layer: 0
   m_Name: ButtonEventHandler
   m_TagString: Untagged
@@ -451,21 +452,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &158460050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 158460049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 049f00994f65a4449869f064c6720e05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainText: {fileID: 1482246155}
-  YesButton: {fileID: 833470103}
-  NoButton: {fileID: 613789410}
 --- !u!4 &158460051
 Transform:
   m_ObjectHideFlags: 0
@@ -513,6 +499,35 @@ MonoBehaviour:
     m_Handle: 0
   HighContrastMode: 0
   TextSizes: []
+--- !u!114 &158460054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158460049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 049f00994f65a4449869f064c6720e05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainText: {fileID: 1482246155}
+  YesButton: {fileID: 833470103}
+  NoButton: {fileID: 613789410}
+--- !u!114 &158460055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158460049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc8e288a18cfc6e4595571c0f4a86c0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  YesButton: {fileID: 833470103}
+  NoButton: {fileID: 613789410}
 --- !u!1 &167559686
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,7 +1196,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 158460050}
+      - m_Target: {fileID: 158460054}
         m_TargetAssemblyTypeName: ButtonScriptPassenger, Assembly-CSharp
         m_MethodName: ButtonPressed
         m_Mode: 2
@@ -1314,7 +1329,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 158460050}
+      - m_Target: {fileID: 158460054}
         m_TargetAssemblyTypeName: ButtonScriptPassenger, Assembly-CSharp
         m_MethodName: ButtonPressed
         m_Mode: 2
@@ -2358,13 +2373,25 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ButtonScriptPassenger, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 2
+      - m_Target: {fileID: 158460055}
+        m_TargetAssemblyTypeName: PreviousButton, Assembly-CSharp
+        m_MethodName: Previous
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 158460054}
+        m_TargetAssemblyTypeName: ButtonScriptPassenger, Assembly-CSharp
+        m_MethodName: Awake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
