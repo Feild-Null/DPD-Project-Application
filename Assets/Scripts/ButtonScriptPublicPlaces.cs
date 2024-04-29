@@ -11,9 +11,8 @@ public class ButtonScriptPublicPlaces : MonoBehaviour
     public GameObject YesButton;
     public GameObject NoButton;
 
-    [SerializeField] int index1 = 0;
-    [SerializeField] int index2 = 0;
-    // list of possible outputs
+    public static int PublicPlaceIndex1=StoringValues.valueToKeep7;
+    public static int PublicPlaceIndex2=StoringValues.valueToKeep8;
     public string[,] Options = {
     
         {
@@ -110,67 +109,71 @@ public class ButtonScriptPublicPlaces : MonoBehaviour
         },
 
     };
-    void Start()
+    public void Awake()
     {
-        MainText.text = Options[index1,index2];
+        PublicPlaceIndex1=StoringValues.valueToKeep7;
+        PublicPlaceIndex2=StoringValues.valueToKeep8;
+        MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
     }
     public void ButtonPressed(GameObject button)
     {
-    
-        if(button.name == "YesButton" && (index1 == 3 && index2 == 1))
+        StoringValues.previousSceneIndex.Add(SceneManager.GetActiveScene().buildIndex); 
+        StoringValues.previousIndex1.Add(PublicPlaceIndex1);
+        StoringValues.previousIndex2.Add(PublicPlaceIndex2);
+        if(button.name == "YesButton" && (PublicPlaceIndex1 == 3 && PublicPlaceIndex2 == 1))
         {
-            index1 = 12;
-            index2 = 0;
-            MainText.text = Options[index1,index2];
+            PublicPlaceIndex1 = 12;
+            PublicPlaceIndex2 = 0;
+            MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
         }
-        else if(button.name == "YesButton" && (index1 == 5 && index2 == 0))
+        else if(button.name == "YesButton" && (PublicPlaceIndex1 == 5 && PublicPlaceIndex2 == 0))
         {
-            index1 = 16;
-            index2 = 0;
-            MainText.text = Options[index1,index2];
+            PublicPlaceIndex1 = 16;
+            PublicPlaceIndex2 = 0;
+            MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
         }
-        else if(button.name == "YesButton" && (index1 == 2 && index2 == 1))
+        else if(button.name == "YesButton" && (PublicPlaceIndex1 == 2 && PublicPlaceIndex2 == 1))
         {
-            index1 = 2;
-            index2 = 0;
-            MainText.text = Options[index1,index2];
+            PublicPlaceIndex1 = 2;
+            PublicPlaceIndex2 = 0;
+            MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
         }
-        else if(button.name == "YesButton" && (index1 == 11 && index2 == 0))
+        else if(button.name == "YesButton" && (PublicPlaceIndex1 == 11 && PublicPlaceIndex2 == 0))
         {
-            index1 = 17;
-            index2 = 0;
-            MainText.text = Options[index1,index2];
+            PublicPlaceIndex1 = 17;
+            PublicPlaceIndex2 = 0;
+            MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
         }
         else if(button.name == "YesButton")
         {
-            index1 += 1;
-            index2 = 0;
-            MainText.text = Options[index1,index2];
+            PublicPlaceIndex1 += 1;
+            PublicPlaceIndex2 = 0;
+            MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
         }
-        if(button.name == "NoButton" && (index1 == 2 && index2 == 1))
+        if(button.name == "NoButton" && (PublicPlaceIndex1 == 2 && PublicPlaceIndex2 == 1))
         {
-            index1 = 11;
-            index2 = 0;
-            MainText.text = Options[index1,index2];
+            PublicPlaceIndex1 = 11;
+            PublicPlaceIndex2 = 0;
+            MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
         }
-        else if(button.name == "NoButton" && (index1 == 5 && index2 == 1))
+        else if(button.name == "NoButton" && (PublicPlaceIndex1 == 5 && PublicPlaceIndex2 == 1))
         {
-            index1 = 16;
-            index2 = 1;
-            MainText.text = Options[index1,index2];
+            PublicPlaceIndex1 = 16;
+            PublicPlaceIndex2 = 1;
+            MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
         }
         else if(button.name == "NoButton")
         {
-            index1 += 1;
-            index2 = 1;
-            MainText.text = Options[index1,index2];
+            PublicPlaceIndex1 += 1;
+            PublicPlaceIndex2 = 1;
+            MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
         }
         //The places where the path ends
-        if((index1 == 1 && index2 == 0)|| (index1 == 4 && index2 == 0)||(index1 == 6 && index2 == 0)
-        ||(index1 == 7 && index2 == 0)||(index1 == 8 && index2 == 0)||(index1 == 9 && index2 == 0)
-        ||(index1 == 10 && index2 == 0)||(index1 == 10 && index2 == 1)||(index1 == 13 && index2 == 0)
-        ||(index1 == 14 && index2 == 1)||(index1 == 15 && index2 == 0)||(index1 == 15 && index2 == 1)
-        ||(index1 == 16 && index2 == 0)||(index1 == 16 && index2 == 1)||(index1 == 17 && index2 == 0))
+        if((PublicPlaceIndex1 == 1 && PublicPlaceIndex2 == 0)|| (PublicPlaceIndex1 == 4 && PublicPlaceIndex2 == 0)||(PublicPlaceIndex1 == 6 && PublicPlaceIndex2 == 0)
+        ||(PublicPlaceIndex1 == 7 && PublicPlaceIndex2 == 0)||(PublicPlaceIndex1 == 8 && PublicPlaceIndex2 == 0)||(PublicPlaceIndex1 == 9 && PublicPlaceIndex2 == 0)
+        ||(PublicPlaceIndex1 == 10 && PublicPlaceIndex2 == 0)||(PublicPlaceIndex1 == 10 && PublicPlaceIndex2 == 1)||(PublicPlaceIndex1 == 13 && PublicPlaceIndex2 == 0)
+        ||(PublicPlaceIndex1 == 14 && PublicPlaceIndex2 == 1)||(PublicPlaceIndex1 == 15 && PublicPlaceIndex2 == 0)||(PublicPlaceIndex1 == 15 && PublicPlaceIndex2 == 1)
+        ||(PublicPlaceIndex1 == 16 && PublicPlaceIndex2 == 0)||(PublicPlaceIndex1 == 16 && PublicPlaceIndex2 == 1)||(PublicPlaceIndex1 == 17 && PublicPlaceIndex2 == 0))
         {
             YesButton.SetActive(false);
             NoButton.SetActive(false);

@@ -29,6 +29,22 @@ public class PreviousButton : MonoBehaviour
             StoringValues.valueToKeep2 = StoringValues.previousIndex2[StoringValues.previousIndex2.Count-1];
             StoringValues.previousIndex2.RemoveAt(StoringValues.previousIndex2.Count-1);
         }
+        //Private Property
+        else if (StoringValues.previousSceneIndex[StoringValues.previousSceneIndex.Count-1] == 2)
+        {
+            StoringValues.valueToKeep5 = StoringValues.previousIndex1[StoringValues.previousIndex1.Count-1];
+            StoringValues.previousIndex1.RemoveAt(StoringValues.previousIndex1.Count-1);
+            StoringValues.valueToKeep6 = StoringValues.previousIndex2[StoringValues.previousIndex2.Count-1];
+            StoringValues.previousIndex2.RemoveAt(StoringValues.previousIndex2.Count-1);
+        }
+        //Public Places
+        else if (StoringValues.previousSceneIndex[StoringValues.previousSceneIndex.Count-1] == 3)
+        {
+            StoringValues.valueToKeep7 = StoringValues.previousIndex1[StoringValues.previousIndex1.Count-1];
+            StoringValues.previousIndex1.RemoveAt(StoringValues.previousIndex1.Count-1);
+            StoringValues.valueToKeep8 = StoringValues.previousIndex2[StoringValues.previousIndex2.Count-1];
+            StoringValues.previousIndex2.RemoveAt(StoringValues.previousIndex2.Count-1);
+        }
         if (StoringValues.previousSceneIndex[StoringValues.previousSceneIndex.Count-1] != SceneManager.GetActiveScene().buildIndex)
         {
             SceneManager.LoadScene(StoringValues.previousSceneIndex[StoringValues.previousSceneIndex.Count-1]);
