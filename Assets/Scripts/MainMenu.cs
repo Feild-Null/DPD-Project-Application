@@ -20,19 +20,19 @@ public class MainMenu : MonoBehaviour
     
         if(button.name == "TrafficButton")
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
         else if(button.name == "ProhibitedButton")
         {
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(6);
         }
         else if(button.name == "PublicButton")
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
         else if(button.name == "PrivateButton")
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
         //The places where the path ends
     }
