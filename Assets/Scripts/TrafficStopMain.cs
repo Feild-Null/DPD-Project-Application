@@ -8,16 +8,16 @@ public class TrafficStopMain : MonoBehaviour
 {
     public void Passenger()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     public void Driver()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void Restart()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(0);
     }
 }
 //Change

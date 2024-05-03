@@ -120,7 +120,7 @@ public class ButtonScriptDriver : MonoBehaviour
         {
             StoringValues.valueToKeep3=1;
             StoringValues.valueToKeep4=1;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
             
         }
         else if(button.name == "NoButton")

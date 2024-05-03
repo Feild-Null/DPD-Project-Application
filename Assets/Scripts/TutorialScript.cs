@@ -5,9 +5,21 @@ using UnityEngine;
 public class TutorialScript : MonoBehaviour
 {
     public GameObject tutorialParent;
-    void Start()
+    void Awake()
     {
-        tutorialParent.SetActive(false);
+        if (PlayerPrefs.GetInt("tutorialUsed", 1) == 1) 
+        {
+            tutorialParent.SetActive(true);
+            PlayerPrefs.SetInt("tutorialUsed", 0);
+            PlayerPrefs.Save(); 
+        }
+        else 
+        {
+            tutorialParent.SetActive(false);
+        }
+
+
+        
     }
 
     void ActivationTest()

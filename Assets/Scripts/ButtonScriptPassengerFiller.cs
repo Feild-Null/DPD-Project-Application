@@ -99,7 +99,7 @@ public class ButtonScriptPassenger : MonoBehaviour
         {
             StoringValues.valueToKeep=1;
             StoringValues.valueToKeep2=1;
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
             
         }
         else if(button.name == "NoButton")
