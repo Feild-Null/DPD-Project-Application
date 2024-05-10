@@ -14,7 +14,7 @@ public class PreviousButton : MonoBehaviour
         YesButton.SetActive(true);
         NoButton.SetActive(true);
         //passenger
-        if (StoringValues.previousSceneIndex[StoringValues.previousSceneIndex.Count-1] == 0)
+        if (StoringValues.previousSceneIndex[StoringValues.previousSceneIndex.Count-1] == 1)
         {
             StoringValues.valueToKeep3 = StoringValues.previousIndex1[StoringValues.previousIndex1.Count-1];
             StoringValues.previousIndex1.RemoveAt(StoringValues.previousIndex1.Count-1);
@@ -22,7 +22,7 @@ public class PreviousButton : MonoBehaviour
             StoringValues.previousIndex2.RemoveAt(StoringValues.previousIndex2.Count-1);
         }
         //driver
-        else if (StoringValues.previousSceneIndex[StoringValues.previousSceneIndex.Count-1] == 1)
+        else if (StoringValues.previousSceneIndex[StoringValues.previousSceneIndex.Count-1] == 2)
         {
             StoringValues.valueToKeep = StoringValues.previousIndex1[StoringValues.previousIndex1.Count-1];
             StoringValues.previousIndex1.RemoveAt(StoringValues.previousIndex1.Count-1);
@@ -30,7 +30,7 @@ public class PreviousButton : MonoBehaviour
             StoringValues.previousIndex2.RemoveAt(StoringValues.previousIndex2.Count-1);
         }
         //Private Property
-        else if (StoringValues.previousSceneIndex[StoringValues.previousSceneIndex.Count-1] == 2)
+        else if (StoringValues.previousSceneIndex[StoringValues.previousSceneIndex.Count-1] == 3)
         {
             StoringValues.valueToKeep5 = StoringValues.previousIndex1[StoringValues.previousIndex1.Count-1];
             StoringValues.previousIndex1.RemoveAt(StoringValues.previousIndex1.Count-1);
@@ -38,7 +38,7 @@ public class PreviousButton : MonoBehaviour
             StoringValues.previousIndex2.RemoveAt(StoringValues.previousIndex2.Count-1);
         }
         //Public Places
-        else if (StoringValues.previousSceneIndex[StoringValues.previousSceneIndex.Count-1] == 3)
+        else if (StoringValues.previousSceneIndex[StoringValues.previousSceneIndex.Count-1] == 4)
         {
             StoringValues.valueToKeep7 = StoringValues.previousIndex1[StoringValues.previousIndex1.Count-1];
             StoringValues.previousIndex1.RemoveAt(StoringValues.previousIndex1.Count-1);
