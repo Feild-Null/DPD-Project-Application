@@ -9,20 +9,55 @@ public class Detector : MonoBehaviour
 {
     public GameObject btn;
     Text txt;
-    public void TestFunct()
+    Image img;
+
+    void Start()
     {
-        print("hi");
+    print(btn.transform.childCount);
     }
 
+
+
+
     public void TextColorBlack(){
-        txt = btn.transform.GetChild(0).GetComponent<Text>();
-        txt.color = Color.black;
+       // print("text color black triggered");
+
+        for (int i = 0; i < btn.transform.childCount; i++)
+        {
+            //print("loop triggered");
+            if (btn.transform.GetChild(i).GetComponent<Text>()){
+                txt = btn.transform.GetChild(i).GetComponent<Text>();
+                txt.color = Color.black;
+            }
+        }
     }
 
     public void TextColorWhite(){
-    txt = btn.transform.GetChild(0).GetComponent<Text>();
-    txt.color = Color.white;
+        for (int i = 0; i < btn.transform.childCount; i++)
+        {
+            if (btn.transform.GetChild(i).GetComponent<Text>()){
+                txt = btn.transform.GetChild(i).GetComponent<Text>();
+                txt.color = Color.white;
+            }
+        }
+    }
+
+    public void IconColorWhite(){
+        print("icon color white triggered");
+        for (int i = 0; i < btn.transform.childCount; i++)
+        {
+            print("loop triggered");
+            if (btn.transform.GetChild(i).GetComponent<Image>()){
+                print("img found");
+                img = btn.transform.GetChild(i).GetComponent<Image>();
+                img.color = Color.black;
+            }
+        }
+    }
+
 }
+
+
 
    /* public void OnPointerEnter(PointerEventData eventData)
     {
@@ -35,4 +70,4 @@ public class Detector : MonoBehaviour
         print("Off Button");
         HandleText(btn, Color.white);
     }*/
-}
+
