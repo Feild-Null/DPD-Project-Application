@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class SettingsScript : MonoBehaviour
 {
+    public GameObject DarkMode;
+    public GameObject DarkBackground;
     public Vector3 scaleMinimum;
     public Vector3 scaleMaximum;
     public GameObject gameObject;
@@ -41,6 +43,10 @@ public class SettingsScript : MonoBehaviour
         // TextSize = PlayerPrefs.GetInt("TextSize", 0);
         OnSliderChanged((float) TextSize);
     }
+    public void LightAgain()
+    {
+        PlayerPrefs.SetInt("ContrastToggle", 1);
+    }
 
     // Update is called once per frame
     void Update()
@@ -56,11 +62,13 @@ public class SettingsScript : MonoBehaviour
         {
             gameObject.SetActive(true);
             gameObject.transform.localScale = scaleMaximum;
+            PlayerPrefs.SetInt("SettingsOpen", 1);
         }
         if (button.name == "BackButtonSettings")
         {
             gameObject.transform.localScale = scaleMinimum;
             gameObject.SetActive(false);
+            PlayerPrefs.SetInt("SettingsOpen", 0);
         }
         if (button.name == "Quit") 
         {
@@ -69,7 +77,15 @@ public class SettingsScript : MonoBehaviour
         }
         if (button.name == "HighContrastModeToggle")
         {
-            if (HighContrastMode) HighContrastMode = false; else HighContrastMode = true;
+            //Makes dark mode bool true or false (0=true 1=false)
+            if (PlayerPrefs.GetInt("ContrastToggle",0) == 0)
+            {
+                PlayerPrefs.SetInt("ContrastToggle", 1);
+            }
+            else if (PlayerPrefs.GetInt("ContrastToggle",0) == 1)
+            {
+                PlayerPrefs.SetInt("ContrastToggle", 0);
+            }
         }
     }
 
