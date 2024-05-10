@@ -3066,7 +3066,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DarkMode: {fileID: 1518246430}
   DarkBackground: {fileID: 1846760544}
-  Settings: {fileID: 1429750586}
+  DarkSettings: {fileID: 1429750586}
+  LightMode: {fileID: 1924717254}
+  LightBackground: {fileID: 765336786}
+  LightSettings: {fileID: 1877887694}
   scaleMinimum: {x: 0, y: 0, z: 0}
   scaleMaximum: {x: 0, y: 0, z: 0}
 --- !u!4 &1112815349
