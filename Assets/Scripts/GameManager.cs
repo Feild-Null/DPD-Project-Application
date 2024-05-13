@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject LightMode;
     public GameObject LightBackground;
     public GameObject LightSettings;
+    
 
     public Vector3 scaleMinimum;
     public Vector3 scaleMaximum;
@@ -51,6 +53,7 @@ public class GameManager : MonoBehaviour
             DarkSettings.transform.localScale = scaleMinimum;
             DarkSettings.SetActive(false);
         }
+
 
     }
 }

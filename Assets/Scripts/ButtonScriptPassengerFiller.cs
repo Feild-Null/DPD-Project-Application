@@ -8,8 +8,11 @@ using TMPro;
 public class ButtonScriptPassenger : MonoBehaviour
 {
     public Text MainText;
+    public Text NightText;
     public GameObject YesButton;
     public GameObject NoButton;
+    public GameObject NightYesButton;
+    public GameObject NightNoButton;
 
     public static int PassengerIndex1=StoringValues.valueToKeep3;
     public static int PassengerIndex2=StoringValues.valueToKeep4;
@@ -70,6 +73,7 @@ public class ButtonScriptPassenger : MonoBehaviour
         PassengerIndex1=StoringValues.valueToKeep3;
         PassengerIndex2=StoringValues.valueToKeep4;
         MainText.text = Options[PassengerIndex1,PassengerIndex2];
+        NightText.text = Options[PassengerIndex1,PassengerIndex2];
     }
     public void ButtonPressed(GameObject button)
     {
@@ -81,18 +85,21 @@ public class ButtonScriptPassenger : MonoBehaviour
             PassengerIndex1 = 7;
             PassengerIndex2 = 0;
             MainText.text = Options[PassengerIndex1,PassengerIndex2];
+            NightText.text = Options[PassengerIndex1,PassengerIndex2];
         }
         else if(button.name == "YesButton")
         {
             PassengerIndex1 += 1;
             PassengerIndex2 = 0;
             MainText.text = Options[PassengerIndex1,PassengerIndex2];
+            NightText.text = Options[PassengerIndex1,PassengerIndex2];
         }
         if(button.name == "NoButton" && (PassengerIndex1 == 3 && PassengerIndex2 == 0))
         {
             PassengerIndex1 = 7;
             PassengerIndex2 = 1;
             MainText.text = Options[PassengerIndex1,PassengerIndex2];
+            NightText.text = Options[PassengerIndex1,PassengerIndex2];
         }
         //Jumps to the Driver scene at inicies 1 and 1
         else if(button.name == "NoButton" && (PassengerIndex1 == 1 && PassengerIndex2 == 1))
@@ -107,11 +114,14 @@ public class ButtonScriptPassenger : MonoBehaviour
             PassengerIndex1 += 1;
             PassengerIndex2 = 1;
             MainText.text = Options[PassengerIndex1,PassengerIndex2];
+            NightText.text = Options[PassengerIndex1,PassengerIndex2];
         }
         if((PassengerIndex1 == 1 && PassengerIndex2 == 0)||(PassengerIndex1 == 2 && PassengerIndex2 == 1)||(PassengerIndex1 == 4 && PassengerIndex2 == 1)||(PassengerIndex1==5&&PassengerIndex2==0)||(PassengerIndex1==6)||(PassengerIndex1==7&&PassengerIndex2==0)||(PassengerIndex1==8&&PassengerIndex2==0)||(PassengerIndex1==9&&PassengerIndex2==0)||(PassengerIndex1==10&&PassengerIndex2==0)||(PassengerIndex1==11))
         {
             YesButton.SetActive(false);
             NoButton.SetActive(false);
+            NightYesButton.SetActive(false);
+            NightNoButton.SetActive(false);
         }
     }
 

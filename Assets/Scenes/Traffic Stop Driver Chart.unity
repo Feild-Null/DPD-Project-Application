@@ -576,8 +576,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainText: {fileID: 1234814434}
+  NightText: {fileID: 22984702}
   YesButton: {fileID: 2041708363}
   NoButton: {fileID: 768032436}
+  NightYesButton: {fileID: 1585989997}
+  NightNoButton: {fileID: 235097314}
 --- !u!114 &263913745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,6 +608,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   YesButton: {fileID: 2041708363}
   NoButton: {fileID: 768032436}
+  NightYesButton: {fileID: 1585989997}
+  NightNoButton: {fileID: 235097314}
 --- !u!1 &298050568
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,7 +844,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 263913746}
         m_TargetAssemblyTypeName: PreviousButton, Assembly-CSharp
         m_MethodName: Previous
         m_Mode: 1
@@ -6314,8 +6319,8 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1746671093}
   - {fileID: 263913742}
+  - {fileID: 1696913530}
   - {fileID: 1554001939}
   - {fileID: 1472321040}
-  - {fileID: 1696913530}
   - {fileID: 595651510}
   - {fileID: 547288427}
