@@ -5,10 +5,12 @@ using UnityEngine.UI;
 
 public class KeepSlider : MonoBehaviour
 {
-    public Slider sliderOne;
+    public Slider mainSlider;
+    public Slider nightSlider;
  
     void Awake()
     {
-        sliderOne.value = PlayerPrefs.GetInt("TextSize", 0);
+        mainSlider.value = PlayerPrefs.GetInt("TextSize", 0);
+        nightSlider.value = PlayerPrefs.GetInt("TextSize", 0);
     }
 }

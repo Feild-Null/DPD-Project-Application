@@ -11,16 +11,18 @@ public class GameManager : MonoBehaviour
     public GameObject LightMode;
     public GameObject LightBackground;
     public GameObject LightSettings;
-    
-
     public Vector3 scaleMinimum;
     public Vector3 scaleMaximum;
     void Awake()
     {
         scaleMinimum = new Vector3(0f,0f,0f);
         scaleMaximum = new Vector3(1f,1f,1f);
-        PlayerPrefs.SetInt("ContrastToggle", 1);
-        PlayerPrefs.SetInt("SettingsOpen", 0);
+        if (StoringValues.prefsSet==0)
+        {
+            PlayerPrefs.SetInt("ContrastToggle", 1);
+            PlayerPrefs.SetInt("SettingsOpen", 0);
+            StoringValues.prefsSet = 1;
+        }
     }
     void Update()
     {
