@@ -2480,6 +2480,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   YesButton: {fileID: 289758906}
   NoButton: {fileID: 1837878062}
+  NightYesButton: {fileID: 1011263862}
+  NightNoButton: {fileID: 1887783718}
 --- !u!114 &740450328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2493,8 +2495,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainText: {fileID: 453671911}
+  NightText: {fileID: 13552237}
   YesButton: {fileID: 289758906}
   NoButton: {fileID: 1837878062}
+  NightYesButton: {fileID: 1011263862}
+  NightNoButton: {fileID: 1887783718}
 --- !u!114 &740450329
 MonoBehaviour:
   m_ObjectHideFlags: 0

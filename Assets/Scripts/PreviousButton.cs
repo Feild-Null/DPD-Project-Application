@@ -9,10 +9,14 @@ public class PreviousButton : MonoBehaviour
 {
     [SerializeField] GameObject YesButton;
     [SerializeField] GameObject NoButton;
+    [SerializeField] GameObject NightYesButton;
+    [SerializeField] GameObject NightNoButton;
     public void Previous()
     {
         YesButton.SetActive(true);
         NoButton.SetActive(true);
+        NightYesButton.SetActive(true);
+        NightNoButton.SetActive(true);
         //passenger
         if (StoringValues.previousSceneIndex[StoringValues.previousSceneIndex.Count-1] == 1)
         {

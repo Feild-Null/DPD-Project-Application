@@ -8,8 +8,11 @@ using TMPro;
 public class ButtonScriptPublicPlaces : MonoBehaviour
 {
     public Text MainText;
+    public Text NightText;
     public GameObject YesButton;
     public GameObject NoButton;
+    public GameObject NightYesButton;
+    public GameObject NightNoButton;
 
     public static int PublicPlaceIndex1=StoringValues.valueToKeep7;
     public static int PublicPlaceIndex2=StoringValues.valueToKeep8;
@@ -114,6 +117,7 @@ public class ButtonScriptPublicPlaces : MonoBehaviour
         PublicPlaceIndex1=StoringValues.valueToKeep7;
         PublicPlaceIndex2=StoringValues.valueToKeep8;
         MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
+        NightText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
     }
     public void ButtonPressed(GameObject button)
     {
@@ -125,48 +129,56 @@ public class ButtonScriptPublicPlaces : MonoBehaviour
             PublicPlaceIndex1 = 12;
             PublicPlaceIndex2 = 0;
             MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
+            NightText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
         }
         else if(button.name == "YesButton" && (PublicPlaceIndex1 == 5 && PublicPlaceIndex2 == 0))
         {
             PublicPlaceIndex1 = 16;
             PublicPlaceIndex2 = 0;
             MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
+            NightText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
         }
         else if(button.name == "YesButton" && (PublicPlaceIndex1 == 2 && PublicPlaceIndex2 == 1))
         {
             PublicPlaceIndex1 = 2;
             PublicPlaceIndex2 = 0;
             MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
+            NightText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
         }
         else if(button.name == "YesButton" && (PublicPlaceIndex1 == 11 && PublicPlaceIndex2 == 0))
         {
             PublicPlaceIndex1 = 17;
             PublicPlaceIndex2 = 0;
             MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
+            NightText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
         }
         else if(button.name == "YesButton")
         {
             PublicPlaceIndex1 += 1;
             PublicPlaceIndex2 = 0;
             MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
+            NightText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
         }
         if(button.name == "NoButton" && (PublicPlaceIndex1 == 2 && PublicPlaceIndex2 == 1))
         {
             PublicPlaceIndex1 = 11;
             PublicPlaceIndex2 = 0;
             MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
+            NightText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
         }
         else if(button.name == "NoButton" && (PublicPlaceIndex1 == 5 && PublicPlaceIndex2 == 1))
         {
             PublicPlaceIndex1 = 16;
             PublicPlaceIndex2 = 1;
             MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
+            NightText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
         }
         else if(button.name == "NoButton")
         {
             PublicPlaceIndex1 += 1;
             PublicPlaceIndex2 = 1;
             MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
+            NightText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
         }
         //The places where the path ends
         if((PublicPlaceIndex1 == 1 && PublicPlaceIndex2 == 0)|| (PublicPlaceIndex1 == 4 && PublicPlaceIndex2 == 0)||(PublicPlaceIndex1 == 6 && PublicPlaceIndex2 == 0)
@@ -177,6 +189,9 @@ public class ButtonScriptPublicPlaces : MonoBehaviour
         {
             YesButton.SetActive(false);
             NoButton.SetActive(false);
+            NightYesButton.SetActive(false);
+            NightNoButton.SetActive(false);
+
         }
     }
 

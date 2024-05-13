@@ -8,8 +8,11 @@ using TMPro;
 public class ButtonScriptPrivateProperty : MonoBehaviour
 {
     public Text MainText;
+    public Text NightText;
     public GameObject YesButton;
     public GameObject NoButton;
+    public GameObject NightYesButton;
+    public GameObject NightNoButton;
 
     public static int PrivatePropertyIndex1=StoringValues.valueToKeep5;
     public static int PrivatePropertyIndex2=StoringValues.valueToKeep6;
@@ -50,6 +53,7 @@ public class ButtonScriptPrivateProperty : MonoBehaviour
         PrivatePropertyIndex1=StoringValues.valueToKeep5;
         PrivatePropertyIndex2=StoringValues.valueToKeep6;
         MainText.text = Options[PrivatePropertyIndex1,PrivatePropertyIndex2];
+        NightText.text = Options[PrivatePropertyIndex1,PrivatePropertyIndex2];
     }
     public void ButtonPressed(GameObject button)
     {
@@ -62,6 +66,7 @@ public class ButtonScriptPrivateProperty : MonoBehaviour
             PrivatePropertyIndex1 = 5;
             PrivatePropertyIndex2 = 0;
             MainText.text = Options[PrivatePropertyIndex1,PrivatePropertyIndex2];
+            NightText.text = Options[PrivatePropertyIndex1,PrivatePropertyIndex2];
         }
         //If yes is pressed add 1 to the first index and set the second index to 0.
         else if(button.name == "YesButton")
@@ -69,6 +74,7 @@ public class ButtonScriptPrivateProperty : MonoBehaviour
             PrivatePropertyIndex1 += 1;
             PrivatePropertyIndex2 = 0;
             MainText.text = Options[PrivatePropertyIndex1,PrivatePropertyIndex2];
+            NightText.text = Options[PrivatePropertyIndex1,PrivatePropertyIndex2];
         }
         //If no is pressed at indicies 3 and 1, go to indicies 5 and 1.
         if(button.name == "NoButton" && (PrivatePropertyIndex1 == 3 && PrivatePropertyIndex2 == 1))
@@ -76,6 +82,7 @@ public class ButtonScriptPrivateProperty : MonoBehaviour
             PrivatePropertyIndex1 = 5;
             PrivatePropertyIndex2 = 1;
             MainText.text = Options[PrivatePropertyIndex1,PrivatePropertyIndex2];
+            NightText.text = Options[PrivatePropertyIndex1,PrivatePropertyIndex2];
         }
         //If no is pressed add 1 to the first index and set the second index to 1.
         else if(button.name == "NoButton")
@@ -83,12 +90,16 @@ public class ButtonScriptPrivateProperty : MonoBehaviour
             PrivatePropertyIndex1 += 1;
             PrivatePropertyIndex2 = 1;
             MainText.text = Options[PrivatePropertyIndex1,PrivatePropertyIndex2];
+            NightText.text = Options[PrivatePropertyIndex1,PrivatePropertyIndex2];
         }
         //determines end locations, currently (1,0), (2,1)(links to passenger), (1,0)(2,1)(4,1)(4,0)(5,1)(6)
         if((PrivatePropertyIndex1 == 1 && PrivatePropertyIndex2 == 0)||(PrivatePropertyIndex1 == 2 && PrivatePropertyIndex2 == 1)||(PrivatePropertyIndex1 == 4 && PrivatePropertyIndex2 == 1)||(PrivatePropertyIndex1==4&&PrivatePropertyIndex2==0)||(PrivatePropertyIndex1==6)||(PrivatePropertyIndex1==5&&PrivatePropertyIndex2==1))
         {
             YesButton.SetActive(false);
             NoButton.SetActive(false);
+            NightYesButton.SetActive(false);
+            NightNoButton.SetActive(false);
+            
         }
     }
     //resets this flowchart

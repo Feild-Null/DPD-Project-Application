@@ -8,8 +8,11 @@ using TMPro;
 public class ButtonScriptDriver : MonoBehaviour
 {
     public Text MainText;
+    public Text NightText;
     public GameObject YesButton;
     public GameObject NoButton;
+    public GameObject NightYesButton;
+    public GameObject NightNoButton;
 
     public static int DriverIndex1=StoringValues.valueToKeep;
     public static int DriverIndex2=StoringValues.valueToKeep2;
@@ -78,6 +81,7 @@ public class ButtonScriptDriver : MonoBehaviour
         DriverIndex1=StoringValues.valueToKeep;
         DriverIndex2=StoringValues.valueToKeep2;
         MainText.text = Options[DriverIndex1,DriverIndex2];
+        NightText.text = Options[DriverIndex1,DriverIndex2];
     }
     public void ButtonPressed(GameObject button)
     {
@@ -90,30 +94,35 @@ public class ButtonScriptDriver : MonoBehaviour
             DriverIndex1 = 7;
             DriverIndex2 = 1;
             MainText.text = Options[DriverIndex1,DriverIndex2];
+            NightText.text = Options[DriverIndex1,DriverIndex2];
         }
         else if(button.name == "YesButton" && (DriverIndex1 == 7 && DriverIndex2 == 1))
         {
             DriverIndex1 = 11;
             DriverIndex2 = 0;
             MainText.text = Options[DriverIndex1,DriverIndex2];
+            NightText.text = Options[DriverIndex1,DriverIndex2];
         }
         else if(button.name == "YesButton")
         {
             DriverIndex1 += 1;
             DriverIndex2 = 0;
             MainText.text = Options[DriverIndex1,DriverIndex2];
+            NightText.text = Options[DriverIndex1,DriverIndex2];
         }
         if(button.name == "NoButton" && (DriverIndex1 == 2 && DriverIndex2 == 0))
         {
             DriverIndex1 = 9;
             DriverIndex2 = 1;
             MainText.text = Options[DriverIndex1,DriverIndex2];
+            NightText.text = Options[DriverIndex1,DriverIndex2];
         }
         else if(button.name == "NoButton" && (DriverIndex1 == 7 && DriverIndex2 == 1))
         {
             DriverIndex1 = 11;
             DriverIndex2 = 1;
             MainText.text = Options[DriverIndex1,DriverIndex2];
+            NightText.text = Options[DriverIndex1,DriverIndex2];
         }
         //Jumps to the Passenger scene at inicies 1 and 1
         else if(button.name == "NoButton" && (DriverIndex1 == 1 && DriverIndex2 == 1))
@@ -128,11 +137,14 @@ public class ButtonScriptDriver : MonoBehaviour
             DriverIndex1 += 1;
             DriverIndex2 = 1;
             MainText.text = Options[DriverIndex1,DriverIndex2];
+            NightText.text = Options[DriverIndex1,DriverIndex2];
         }
         if((DriverIndex1 == 1 && DriverIndex2 == 0)||(DriverIndex1 == 2 && DriverIndex2 == 1)||(DriverIndex1 == 4 && DriverIndex2 == 0)||(DriverIndex1==5&&DriverIndex2==0)||(DriverIndex1==6&&DriverIndex2==0)||(DriverIndex1==8&&DriverIndex2==0)||(DriverIndex1==10&&DriverIndex2==1)||(DriverIndex1==11&&DriverIndex2==0)||(DriverIndex1==12&&DriverIndex2==1)||(DriverIndex1==13)||(DriverIndex1==8))
         {
             YesButton.SetActive(false);
             NoButton.SetActive(false);
+            NightYesButton.SetActive(false);
+            NightNoButton.SetActive(false);
         }
     }
 
