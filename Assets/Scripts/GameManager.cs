@@ -13,16 +13,22 @@ public class GameManager : MonoBehaviour
     public GameObject LightSettings;
     public Vector3 scaleMinimum;
     public Vector3 scaleMaximum;
+    public int ContrastToggle = 0;
+
     void Awake()
     {
         scaleMinimum = new Vector3(0f,0f,0f);
         scaleMaximum = new Vector3(1f,1f,1f);
         if (StoringValues.prefsSet==0)
         {
-            PlayerPrefs.SetInt("ContrastToggle", 1);
+            ContrastToggle=PlayerPrefs.GetInt("ContrastToggle", 0);
             PlayerPrefs.SetInt("SettingsOpen", 0);
             StoringValues.prefsSet = 1;
         }
+    }
+    void Start()
+    {
+        PlayerPrefs.SetInt("ContrastToggle", ContrastToggle);
     }
     void Update()
     {
