@@ -15,6 +15,7 @@ public class StoringValues : MonoBehaviour
     public static int valueToKeep6=0;
     public static int valueToKeep7=0;
     public static int valueToKeep8=0;
+    public static int prefsSet=0;
     public static List<int> previousIndex1 = new List<int>();
     public static List<int> previousIndex2 = new List<int>();
     public static List<int> previousSceneIndex = new List<int>();
