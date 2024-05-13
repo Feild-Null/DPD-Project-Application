@@ -16,9 +16,6 @@ public class Detector : MonoBehaviour
     print(btn.transform.childCount);
     }
 
-
-
-
     public void TextColorBlack(){
        // print("text color black triggered");
 
@@ -44,6 +41,19 @@ public class Detector : MonoBehaviour
 
     public void IconColorWhite(){
         print("icon color white triggered");
+        for (int i = 0; i < btn.transform.childCount; i++)
+        {
+            print("loop triggered");
+            if (btn.transform.GetChild(i).GetComponent<Image>()){
+                print("img found");
+                img = btn.transform.GetChild(i).GetComponent<Image>();
+                img.color = Color.white;
+            }
+        }
+    }
+
+    public void IconColorBlack(){
+        print("icon color blac triggered");
         for (int i = 0; i < btn.transform.childCount; i++)
         {
             print("loop triggered");
