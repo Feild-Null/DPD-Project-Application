@@ -36,7 +36,7 @@ public class ButtonScriptPublicPlaces : MonoBehaviour
         {
             //3-1; 3-2
             "Prior Felony Conviction?",
-            "Carrying long gun or firearm?"
+            "Carrying long gun or in possession of a firearm?"
             //3-2 leads to 12-1
         },
         {
@@ -47,7 +47,7 @@ public class ButtonScriptPublicPlaces : MonoBehaviour
         {
             //5-1; 5-2
             "Conviction in the last five years?",
-            "Prior conviction for; deadly conduct, terroristic threat, or disorderly conduct?"
+            "Prior conviction for; Assault, deadly conduct, terroristic threat, or disorderly conduct (Display/Discharge)?"
             //Leads to 16-1; 16-2
         },
         {
@@ -92,17 +92,17 @@ public class ButtonScriptPublicPlaces : MonoBehaviour
         },
         {
             //14-1; 14-2
-            "Convicion in the last five years?",
+            "Conviction in the last five years?",
             "No offense"
         },
         {
             //15-1; 15-2
-            "46.04 (2)(b)",
+            "46.04 (2)(b) Misdemeanor A",
             "Optional alternaive: Contact the gun detective to file the charge in federal court"
         },
         {
             //16-1; 16-2
-            "46.02 (a-7)(e)(2) felony 3",
+            "46.02 (a-7)(e)(2) Felony 3",
             "Optional alternaive: Contact the gun detective to file the charge in federal court"
         },
         {
@@ -147,8 +147,7 @@ public class ButtonScriptPublicPlaces : MonoBehaviour
         }
         else if(button.name == "YesButton" && (PublicPlaceIndex1 == 11 && PublicPlaceIndex2 == 0))
         {
-            PublicPlaceIndex1 = 17;
-            PublicPlaceIndex2 = 0;
+            SceneManager.LoadScene(3);
             MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
             NightText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
         }
@@ -166,9 +165,30 @@ public class ButtonScriptPublicPlaces : MonoBehaviour
             MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
             NightText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
         }
+        else if(button.name == "NoButton" && (PublicPlaceIndex1 == 5 && PublicPlaceIndex2 == 0))
+        {
+            PublicPlaceIndex1 = 16;
+            PublicPlaceIndex2 = 0;
+            MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
+            NightText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
+        }
         else if(button.name == "NoButton" && (PublicPlaceIndex1 == 5 && PublicPlaceIndex2 == 1))
         {
             PublicPlaceIndex1 = 16;
+            PublicPlaceIndex2 = 1;
+            MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
+            NightText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
+        }
+        else if(button.name == "NoButton" && (PublicPlaceIndex1 == 3 && PublicPlaceIndex2 == 1))
+        {
+            PublicPlaceIndex1 = 2;
+            PublicPlaceIndex2 = 0;
+            MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
+            NightText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
+        }
+        else if(button.name == "NoButton" && (PublicPlaceIndex1 == 11 && PublicPlaceIndex2 == 0))
+        {
+            PublicPlaceIndex1 = 1;
             PublicPlaceIndex2 = 1;
             MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
             NightText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
@@ -180,6 +200,7 @@ public class ButtonScriptPublicPlaces : MonoBehaviour
             MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
             NightText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
         }
+        
         //The places where the path ends
         if((PublicPlaceIndex1 == 1 && PublicPlaceIndex2 == 0)|| (PublicPlaceIndex1 == 4 && PublicPlaceIndex2 == 0)||(PublicPlaceIndex1 == 6 && PublicPlaceIndex2 == 0)
         ||(PublicPlaceIndex1 == 7 && PublicPlaceIndex2 == 0)||(PublicPlaceIndex1 == 8 && PublicPlaceIndex2 == 0)||(PublicPlaceIndex1 == 9 && PublicPlaceIndex2 == 0)
