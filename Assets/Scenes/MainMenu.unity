@@ -241,7 +241,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 90673373}
+      - m_Target: {fileID: 158460053}
         m_TargetAssemblyTypeName: SettingsScript, Assembly-CSharp
         m_MethodName: ButtonPressed
         m_Mode: 2
@@ -291,60 +291,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87822093}
   m_CullTransparentMesh: 1
---- !u!1 &90673372
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 90673374}
-  - component: {fileID: 90673373}
-  m_Layer: 0
-  m_Name: ButtonEventHandler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &90673373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 90673372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd869891245ef8f468912c0a272160e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DarkMode: {fileID: 1870335971}
-  DarkBackground: {fileID: 2122861610}
-  scaleMinimum: {x: 0, y: 0, z: 0}
-  scaleMaximum: {x: 0, y: 0, z: 0}
-  gameObject: {fileID: 407635247}
-  TextSize: 30
-  scene:
-    m_Handle: 0
-  HighContrastMode: 0
-  TextSizes: []
---- !u!4 &90673374
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 90673372}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.752122, y: -44.530064, z: -2.3675861}
-  m_LocalScale: {x: 0.9272122, y: 0.9272122, z: 0.9272122}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 407635248}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &100854810
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,7 +910,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 90673373}
+      - m_Target: {fileID: 158460053}
         m_TargetAssemblyTypeName: SettingsScript, Assembly-CSharp
         m_MethodName: OnSliderChanged
         m_Mode: 0
@@ -1004,7 +950,6 @@ RectTransform:
   m_LocalScale: {x: 0.941923, y: 0.941923, z: 0.941923}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 90673374}
   - {fileID: 1502631833}
   - {fileID: 911062987}
   - {fileID: 318734328}
@@ -1941,7 +1886,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 90673373}
+      - m_Target: {fileID: 158460053}
         m_TargetAssemblyTypeName: SettingsScript, Assembly-CSharp
         m_MethodName: ButtonPressed
         m_Mode: 2
@@ -4138,8 +4083,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 90673373}
-        m_TargetAssemblyTypeName: SettingsScript, Assembly-CSharp
+      - m_Target: {fileID: 158460052}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: ButtonPressed
         m_Mode: 2
         m_Arguments:
@@ -4678,7 +4623,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 90673373}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SettingsScript, Assembly-CSharp
         m_MethodName: ButtonPressed
         m_Mode: 2
