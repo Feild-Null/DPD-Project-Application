@@ -40,7 +40,7 @@ public class ButtonScriptPassenger : MonoBehaviour
         },
         {
             "46.04 (A)(1) Felony 3",
-            "Prior M/A Family Violence Conviction?"
+            "Prior M/A Family Violence Conviction within 5 years?"
         },
         {
             "46.04 (b) Misdemeanor A",
@@ -52,7 +52,7 @@ public class ButtonScriptPassenger : MonoBehaviour
         },
         {
             "46.02 (a-7)(e)(1) Felony 2, Five Year Mandatory Minimum Sentence",
-            "Prior M/A Family Violence Conviction?"
+            "Prior M/A Family Violence Conviction within 5 years?"
         },
         {
             "46.02 (a-7)(e)(2) Felony 3",
