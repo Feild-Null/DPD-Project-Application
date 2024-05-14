@@ -4,18 +4,27 @@ using UnityEngine;
 
 public class TutorialScript : MonoBehaviour
 {
-    public GameObject tutorialParent;
+    public GameObject darkTutorialParent;
+    public GameObject lightTutorialParent;
     void Awake()
     {
         if (PlayerPrefs.GetInt("tutorialUsed", 1) == 1) 
         {
-            tutorialParent.SetActive(true);
+            if (PlayerPrefs.GetInt("ContrastToggle", 1) == 0)
+            {
+                darkTutorialParent.SetActive(true);
+            } 
+            else if (PlayerPrefs.GetInt("ContrastToggle", 1) == 1)
+            {
+                lightTutorialParent.SetActive(true);
+            }
             PlayerPrefs.SetInt("tutorialUsed", 0);
             PlayerPrefs.Save(); 
         }
         else 
         {
-            tutorialParent.SetActive(false);
+            lightTutorialParent.SetActive(false);
+            darkTutorialParent.SetActive(false);
         }
 
 
@@ -28,6 +37,14 @@ public class TutorialScript : MonoBehaviour
     }
     public void ButtonPressed()
     {
-        if (tutorialParent.activeSelf == false) tutorialParent.SetActive(true); else tutorialParent.SetActive(false);
+        if (PlayerPrefs.GetInt("ContrastToggle", 1) == 0)
+        {
+            if (darkTutorialParent.activeSelf == false) darkTutorialParent.SetActive(true); else darkTutorialParent.SetActive(false);
+        } 
+        else if (PlayerPrefs.GetInt("ContrastToggle", 1) == 1)
+        {
+            if (lightTutorialParent.activeSelf == false) lightTutorialParent.SetActive(true); else lightTutorialParent.SetActive(false);
+        }
+        
     }
 }
