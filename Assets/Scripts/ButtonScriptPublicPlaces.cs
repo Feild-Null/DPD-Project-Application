@@ -42,13 +42,13 @@ public class ButtonScriptPublicPlaces : MonoBehaviour
         {
             //4-1; 4-2
             "46.02 (a-7)(e)(1) Felony 2; Five year mandatory minimum",
-            "M/A Family violence conviction?"
+            "Prior M/A Family violence conviction?"
         },
         {
             //5-1; 5-2
             "Conviction in the last five years?",
             "Prior conviction for; Assault, deadly conduct, terroristic threat, or disorderly conduct (Display/Discharge)?"
-            //Leads to 16-1; 16-2
+            //Leads to 6-1; 6-2
         },
         {
             //6-1; 6-2
@@ -57,7 +57,7 @@ public class ButtonScriptPublicPlaces : MonoBehaviour
         },
         {
             //7-1; 7-2
-            "46.02 (a)(2)(A)",
+            "46.02 (a-6) Misdemeanor A",
             "16 or younger?"
         },
         {
@@ -168,13 +168,13 @@ public class ButtonScriptPublicPlaces : MonoBehaviour
         else if(button.name == "NoButton" && (PublicPlaceIndex1 == 5 && PublicPlaceIndex2 == 0))
         {
             PublicPlaceIndex1 = 16;
-            PublicPlaceIndex2 = 0;
+            PublicPlaceIndex2 = 1;
             MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
             NightText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
         }
         else if(button.name == "NoButton" && (PublicPlaceIndex1 == 5 && PublicPlaceIndex2 == 1))
         {
-            PublicPlaceIndex1 = 16;
+            PublicPlaceIndex1 = 6;
             PublicPlaceIndex2 = 1;
             MainText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
             NightText.text = Options[PublicPlaceIndex1,PublicPlaceIndex2];
