@@ -56,7 +56,7 @@ public class ButtonScriptPassenger : MonoBehaviour
         },
         {
             "46.02 (a-7)(e)(2) Felony 3",
-            "Prior Conviction for:\n Assault, Deadly Conduct,\n Terroristic Threat,\n Disorderly Conduct\n(Display/Discharge)?"
+            "Prior Conviction for: Assault, Deadly Conduct, Terroristic Threat, Disorderly Conduct (Display/Discharge)?"
         },
         {
             "46.02 (a)(2)(B) Misdemeanor A",

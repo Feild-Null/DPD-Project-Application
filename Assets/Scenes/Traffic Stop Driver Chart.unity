@@ -6645,11 +6645,11 @@ MonoBehaviour:
   DarkMode: {fileID: 1472321036}
   DarkBackground: {fileID: 547288423}
   DarkSettings: {fileID: 1508885584}
-  DarkSlider: {fileID: 0}
+  DarkSlider: {fileID: 287607588}
   LightMode: {fileID: 1554001935}
   LightBackground: {fileID: 595651506}
   LightSettings: {fileID: 1159368879}
-  LightSlider: {fileID: 0}
+  LightSlider: {fileID: 1284311523}
   scaleMinimum: {x: 0, y: 0, z: 0}
   scaleMaximum: {x: 0, y: 0, z: 0}
   ContrastToggle: 0
