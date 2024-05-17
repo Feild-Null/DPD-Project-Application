@@ -1567,8 +1567,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 18.550201, y: -65}
-  m_SizeDelta: {x: 1400.1003, y: 674.11145}
+  m_AnchoredPosition: {x: -136.64984, y: 0}
+  m_SizeDelta: {x: 1710.5004, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &622876632
 MonoBehaviour:
@@ -1653,7 +1653,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 744994145}
-  - component: {fileID: 744994146}
   m_Layer: 5
   m_Name: ParallaxBackground
   m_TagString: Untagged
@@ -1682,24 +1681,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &744994146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 744994144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17d7dcd177566a5458af1affa89d3a39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tiles:
-  - {fileID: 788664884}
-  - {fileID: 1950876555}
-  left: -1000
-  right: {x: 2171.52, y: 194.51, z: 0}
-  rate: 7
 --- !u!1 &751123919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2080,8 +2061,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 18.55017, y: -65}
-  m_SizeDelta: {x: 1400.1003, y: 674.11145}
+  m_AnchoredPosition: {x: -136.64948, y: 0}
+  m_SizeDelta: {x: 1710.5011, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &788664885
 MonoBehaviour:
@@ -2444,8 +2425,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1621, y: -65}
-  m_SizeDelta: {x: 1400.1003, y: 674.1113}
+  m_AnchoredPosition: {x: 1621, y: 0}
+  m_SizeDelta: {x: 1400.1003, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &916441612
 MonoBehaviour:
@@ -3691,7 +3672,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1230656273}
-  - component: {fileID: 1230656274}
   m_Layer: 5
   m_Name: ParallaxBackground
   m_TagString: Untagged
@@ -3720,24 +3700,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1230656274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230656272}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17d7dcd177566a5458af1affa89d3a39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tiles:
-  - {fileID: 622876631}
-  - {fileID: 916441611}
-  left: -1000
-  right: {x: 2171.52, y: 194.51, z: 0}
-  rate: 7
 --- !u!1 &1283387204
 GameObject:
   m_ObjectHideFlags: 0
@@ -4833,14 +4795,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.18823531, g: 0.19607845, b: 0.20784315, a: 0.99215686}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9490196}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1384879130, guid: b017f2d0e9396da4b8a5e24cdb30206b, type: 3}
+  m_Sprite: {fileID: -1927233975, guid: cec8840324563f649b05484ccf8f77c0, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7024,8 +6986,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1621, y: -65}
-  m_SizeDelta: {x: 1400.1003, y: 674.1113}
+  m_AnchoredPosition: {x: 1621, y: 0}
+  m_SizeDelta: {x: 1400.1003, y: 1200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1950876556
 MonoBehaviour:
