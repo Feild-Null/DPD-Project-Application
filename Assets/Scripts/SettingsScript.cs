@@ -75,7 +75,7 @@ public class SettingsScript : MonoBehaviour
             print("Are you sure you want to quit?");
             Application.Quit();
         }
-        if (button.name == "HighContrastModeToggle")
+        if (button.name == "LightHighContrastModeToggle" || button.name == "HighContrastModeToggle" || button.name == "DarkHighContrastModeToggle" )
         {
             //Makes dark mode bool true or false (0=true 1=false)
             if (PlayerPrefs.GetInt("ContrastToggle",0) == 0)
