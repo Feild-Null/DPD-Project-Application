@@ -51,7 +51,10 @@ public class SettingsScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerPrefs.SetInt("TextSize", TextSize);
+        if (PlayerPrefs.GetInt("TextSize", 0)!=TextSize)
+        {
+            PlayerPrefs.SetInt("TextSize", TextSize);
+        }
         PlayerPrefs.Save();
     }
 

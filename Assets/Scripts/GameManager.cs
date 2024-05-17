@@ -8,9 +8,11 @@ public class GameManager : MonoBehaviour
     public GameObject DarkMode;
     public GameObject DarkBackground;
     public GameObject DarkSettings;
+    public Slider DarkSlider;
     public GameObject LightMode;
     public GameObject LightBackground;
     public GameObject LightSettings;
+    public Slider LightSlider;
     public Vector3 scaleMinimum;
     public Vector3 scaleMaximum;
     public int ContrastToggle = 0;
@@ -57,7 +59,11 @@ public class GameManager : MonoBehaviour
             DarkSettings.transform.localScale = scaleMinimum;
             DarkSettings.SetActive(false);
         }
-
+        if (PlayerPrefs.GetInt("TextSize", 0)!=LightSlider.value || PlayerPrefs.GetInt("TextSize", 0)!=DarkSlider.value)
+        {
+            LightSlider.value = PlayerPrefs.GetInt("TextSize", 0);
+            DarkSlider.value = PlayerPrefs.GetInt("TextSize", 0);
+        }
 
     }
 }
