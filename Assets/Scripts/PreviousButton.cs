@@ -52,8 +52,7 @@ public class PreviousButton : MonoBehaviour
         if (StoringValues.previousSceneIndex[StoringValues.previousSceneIndex.Count-1] != SceneManager.GetActiveScene().buildIndex)
         {
             SceneManager.LoadScene(StoringValues.previousSceneIndex[StoringValues.previousSceneIndex.Count-1]);
-            StoringValues.previousSceneIndex.RemoveAt(StoringValues.previousSceneIndex.Count-1);
         }
-        
+        StoringValues.previousSceneIndex.RemoveAt(StoringValues.previousSceneIndex.Count-1);
     }
 }

@@ -13,7 +13,7 @@ public class Detector : MonoBehaviour
 
     void Start()
     {
-    print(btn.transform.childCount);
+    //print(btn.transform.childCount);
     }
 
     public void TextColorBlack(){
@@ -40,12 +40,12 @@ public class Detector : MonoBehaviour
     }
 
     public void IconColorWhite(){
-        print("icon color white triggered");
+        // print("icon color white triggered");
         for (int i = 0; i < btn.transform.childCount; i++)
         {
-            print("loop triggered");
+            // print("loop triggered");
             if (btn.transform.GetChild(i).GetComponent<Image>()){
-                print("img found");
+                //print("img found");
                 img = btn.transform.GetChild(i).GetComponent<Image>();
                 img.color = Color.white;
             }
@@ -53,12 +53,12 @@ public class Detector : MonoBehaviour
     }
 
     public void IconColorBlack(){
-        print("icon color blac triggered");
+        //print("icon color blac triggered");
         for (int i = 0; i < btn.transform.childCount; i++)
         {
-            print("loop triggered");
+            //print("loop triggered");
             if (btn.transform.GetChild(i).GetComponent<Image>()){
-                print("img found");
+                //print("img found");
                 img = btn.transform.GetChild(i).GetComponent<Image>();
                 img.color = Color.black;
             }
