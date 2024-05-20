@@ -6,15 +6,12 @@ public class TutorialScript : MonoBehaviour
 {
     public GameObject darkTutorialParent;
     public GameObject lightTutorialParent;
+    [SerializeField] private bool RESET_TUTORIAL = false;
     void Awake()
     {
         if (PlayerPrefs.GetInt("tutorialUsed", 1) == 1) 
         {
-            if (PlayerPrefs.GetInt("ContrastToggle", 1) == 0)
-            {
-                darkTutorialParent.SetActive(true);
-            } 
-            else if (PlayerPrefs.GetInt("ContrastToggle", 1) == 1)
+            if (PlayerPrefs.GetInt("ContrastToggle", 1) == 1)
             {
                 lightTutorialParent.SetActive(true);
             }
@@ -46,5 +43,14 @@ public class TutorialScript : MonoBehaviour
             if (lightTutorialParent.activeSelf == false) lightTutorialParent.SetActive(true); else lightTutorialParent.SetActive(false);
         }
         
+    }
+
+    void Update()
+    {
+        if (RESET_TUTORIAL)
+        {
+            PlayerPrefs.SetInt("tutorialUsed", 1);
+            PlayerPrefs.Save(); 
+        }
     }
 }
