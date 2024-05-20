@@ -60,6 +60,7 @@ public class ButtonScriptPrivateProperty : MonoBehaviour
         StoringValues.previousSceneIndex.Add(SceneManager.GetActiveScene().buildIndex); 
         StoringValues.previousIndex1.Add(PrivatePropertyIndex1);
         StoringValues.previousIndex2.Add(PrivatePropertyIndex2);
+
         //If yes is pressed at indicies 3 and 1, go to indicies 5 and 0.
         if(button.name == "YesButton" && (PrivatePropertyIndex1 == 3 && PrivatePropertyIndex2 == 1))
         {
