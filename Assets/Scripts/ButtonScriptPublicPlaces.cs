@@ -98,12 +98,12 @@ public class ButtonScriptPublicPlaces : MonoBehaviour
         {
             //15-1; 15-2
             "46.04 (2)(b) Misdemeanor A",
-            "Optional alternative: Contact the gun detective to file the charge in federal court"
+            "Optional Alternative: Contact the gun detective to file the charge in federal court"
         },
         {
             //16-1; 16-2
             "46.02 (a-7)(e)(2) Felony 3",
-            "Optional alternative: Contact the gun detective to file the charge in federal court"
+            "Optional Alternative: Contact the gun detective to file the charge in federal court"
         },
         {
             //17-1; 17-2

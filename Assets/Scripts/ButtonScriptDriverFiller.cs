@@ -72,7 +72,7 @@ public class ButtonScriptDriver : MonoBehaviour
         },
         {//13
             "46.04 (b) \n Misdemeanor A",
-            "Optional Alternative \n Contact the Gun Detective to file the charge in Federal Court"
+            "Optional Alternative: \n Contact the Gun Detective to file the charge in Federal Court"
         },
 
     };
