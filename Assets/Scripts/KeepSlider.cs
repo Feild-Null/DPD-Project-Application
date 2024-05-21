@@ -10,7 +10,7 @@ public class KeepSlider : MonoBehaviour
  
     void Awake()
     {
-        mainSlider.value = PlayerPrefs.GetInt("TextSize", 0);
-        nightSlider.value = PlayerPrefs.GetInt("TextSize", 0);
+        mainSlider.value = PlayerPrefs.GetInt("TextSize", 29);
+        nightSlider.value = PlayerPrefs.GetInt("TextSize", 29);
     }
 }
