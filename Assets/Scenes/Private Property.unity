@@ -2180,7 +2180,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9.818878, y: 222.76492}
+  m_AnchoredPosition: {x: -3.6820047, y: 221.53671}
   m_SizeDelta: {x: 505.62, y: 124.2561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &530535209
@@ -2315,6 +2315,7 @@ GameObject:
   - component: {fileID: 580390350}
   - component: {fileID: 580390352}
   - component: {fileID: 580390351}
+  - component: {fileID: 580390353}
   m_Layer: 0
   m_Name: LightVideo
   m_TagString: Untagged
@@ -2383,6 +2384,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580390349}
   m_CullTransparentMesh: 1
+--- !u!114 &580390353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580390349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2735fd0623539c74a8d7edd3fe1da628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 928526939}
 --- !u!1 &633539733
 GameObject:
   m_ObjectHideFlags: 0
@@ -3856,7 +3870,7 @@ VideoPlayer:
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
-  m_Looping: 0
+  m_Looping: 1
   m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
@@ -7074,6 +7088,7 @@ GameObject:
   - component: {fileID: 1772327974}
   - component: {fileID: 1772327976}
   - component: {fileID: 1772327975}
+  - component: {fileID: 1772327977}
   m_Layer: 0
   m_Name: DarkVideo
   m_TagString: Untagged
@@ -7142,6 +7157,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772327973}
   m_CullTransparentMesh: 1
+--- !u!114 &1772327977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772327973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2735fd0623539c74a8d7edd3fe1da628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 1979258105}
 --- !u!1 &1810461517
 GameObject:
   m_ObjectHideFlags: 0
@@ -7621,7 +7649,7 @@ VideoPlayer:
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
-  m_Looping: 0
+  m_Looping: 1
   m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
@@ -8046,7 +8074,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9.818878, y: 222.76492}
+  m_AnchoredPosition: {x: -3.6820047, y: 221.53671}
   m_SizeDelta: {x: 505.62, y: 124.2561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2073852409
