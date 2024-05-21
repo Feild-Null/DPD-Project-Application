@@ -11,7 +11,7 @@ public class SettingsScript : MonoBehaviour
     public Vector3 scaleMinimum;
     public Vector3 scaleMaximum;
     public GameObject gameObject;
-    public int TextSize = 30;
+    public int TextSize = 29;
     public Scene scene;
     public bool HighContrastMode = false;
     public GameObject[] TextSizes;
@@ -41,7 +41,10 @@ public class SettingsScript : MonoBehaviour
         //     PlayerPrefs.SetInt("TextSize", 39);
         // }
         // TextSize = PlayerPrefs.GetInt("TextSize", 0);
-        OnSliderChanged((float) TextSize);
+        for (int i = 0; i < TextSizes.Length; i++)
+        {
+            TextSizes[i].GetComponent<Text>().fontSize = TextSize;
+        }
     }
     public void LightAgain()
     {
