@@ -5,10 +5,14 @@ using UnityEngine.Video;
 
 public class PreloadVideo : MonoBehaviour
 {
-    [SerializeField] VideoPlayer videoPlayer;
+    [SerializeField] VideoPlayer lightVideoPlayer;
+    [SerializeField] VideoPlayer darkVideoPlayer;
+
+
     void Awake()
     {
-        videoPlayer.Prepare();
+        lightVideoPlayer.Prepare();
+        darkVideoPlayer.Prepare();
     }
 
     // Update is called once per frame
