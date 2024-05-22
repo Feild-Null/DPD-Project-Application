@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public Vector3 scaleMinimum;
     public Vector3 scaleMaximum;
     public int ContrastToggle = 0;
-    public bool reset = false;
+    public bool reset_USE_ONLY_IN_PLAY_MODE = false;
 
     void Awake()
     {
@@ -65,10 +65,10 @@ public class GameManager : MonoBehaviour
             LightSlider.value = PlayerPrefs.GetInt("TextSize", 0);
             DarkSlider.value = PlayerPrefs.GetInt("TextSize", 0);
         }
-        if (reset)
+        if (reset_USE_ONLY_IN_PLAY_MODE)
         {
             ResetPrefs();
-            reset = false;
+            reset_USE_ONLY_IN_PLAY_MODE = false;
         }
 
     }
