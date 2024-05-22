@@ -18,11 +18,11 @@ public class TutorialScript : MonoBehaviour
             PlayerPrefs.SetInt("tutorialUsed", 0);
             PlayerPrefs.Save(); 
         }
-        else 
+        else
         {
             lightTutorialParent.SetActive(false);
-            darkTutorialParent.SetActive(false);
         }
+        darkTutorialParent.SetActive(false);
 
 
         
