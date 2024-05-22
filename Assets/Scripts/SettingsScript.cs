@@ -34,17 +34,12 @@ public class SettingsScript : MonoBehaviour
         }
 
         // finishing adjusting text sizes
-        TextSize = PlayerPrefs.GetInt("TextSize", 0);
-        //code in progress/doesn't work.
-        // if (scene.name == "MainMenu" && TextSize >= 39)
+        TextSize = PlayerPrefs.GetInt("TextSize", 29);
+
+        // for (int i = 0; i < TextSizes.Length; i++)
         // {
-        //     PlayerPrefs.SetInt("TextSize", 39);
+        //     TextSizes[i].GetComponent<Text>().fontSize = TextSize;
         // }
-        // TextSize = PlayerPrefs.GetInt("TextSize", 0);
-        for (int i = 0; i < TextSizes.Length; i++)
-        {
-            TextSizes[i].GetComponent<Text>().fontSize = TextSize;
-        }
     }
     public void LightAgain()
     {

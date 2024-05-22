@@ -869,7 +869,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: 
+  m_Url: file://C:/Users/mh216139/Desktop/DPD APP/Assets/Video/DPDAppTutorial.mp4
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -1143,6 +1143,7 @@ MonoBehaviour:
   scaleMinimum: {x: 0, y: 0, z: 0}
   scaleMaximum: {x: 0, y: 0, z: 0}
   ContrastToggle: 0
+  reset_USE_ONLY_IN_PLAY_MODE: 0
 --- !u!4 &446362539
 Transform:
   m_ObjectHideFlags: 0
@@ -1309,10 +1310,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 93b164fc341c6c54995306e776378232, type: 3}
-    m_FontSize: 30
+    m_FontSize: 29
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 131
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -3137,7 +3138,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ee82c9954d19c2e488ef53d2f6aa848b, type: 3}
-    m_FontSize: 23
+    m_FontSize: 29
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -3216,7 +3217,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ee82c9954d19c2e488ef53d2f6aa848b, type: 3}
-    m_FontSize: 23
+    m_FontSize: 29
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -3295,10 +3296,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 9668de743522a564080313e1467ca804, type: 3}
-    m_FontSize: 30
+    m_FontSize: 29
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -4373,7 +4374,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ee82c9954d19c2e488ef53d2f6aa848b, type: 3}
-    m_FontSize: 23
+    m_FontSize: 29
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -4610,10 +4611,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 93b164fc341c6c54995306e776378232, type: 3}
-    m_FontSize: 30
+    m_FontSize: 29
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -4882,10 +4883,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 93b164fc341c6c54995306e776378232, type: 3}
-    m_FontSize: 30
+    m_FontSize: 29
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 131
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -6415,7 +6416,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ee82c9954d19c2e488ef53d2f6aa848b, type: 3}
-    m_FontSize: 23
+    m_FontSize: 29
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -6708,7 +6709,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ee82c9954d19c2e488ef53d2f6aa848b, type: 3}
-    m_FontSize: 23
+    m_FontSize: 29
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -7029,10 +7030,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 9668de743522a564080313e1467ca804, type: 3}
-    m_FontSize: 30
+    m_FontSize: 29
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -7292,7 +7293,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ee82c9954d19c2e488ef53d2f6aa848b, type: 3}
-    m_FontSize: 23
+    m_FontSize: 29
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -7446,10 +7447,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 93b164fc341c6c54995306e776378232, type: 3}
-    m_FontSize: 30
+    m_FontSize: 29
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
